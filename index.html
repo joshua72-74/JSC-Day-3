@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <!-- if we apply base var in this, it will overwrite as this is a local scope, closer one always wins -->
+        <!-- <h2 style="--base: #000000">Updating CSS variables with <span class="h1">JS</span></h2> -->
+        <h2>Updating CSS variables with <span class="h1">JS</span></h2>
+        <div class="controls">
+            <label for="spacing">Spacing</label>
+            <input type="range" name="spacing" min="10" max="200" value="10" data-sizing="px" >
+            <!-- data-name="joel" data-msg="hello" -->
+
+            <label for="blur" >Blur</label>
+            <input type="range" name="blur" min="0" max="30" value="10" data-sizing="px">
+
+            <label for="rotate">Rotate</label>
+            <input type="range" name="rotate" min="0" max="360" value="10" data-sizing="deg">
+
+            <label for="base">Base color</label>
+            <input type="color" name="base" value="#ffc600">
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1524230507669-5ff97982bb5e?q=80&w=1928&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

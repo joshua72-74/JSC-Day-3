@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+
+:root{
+    --base: #04ff00;
+    --spacing: 20px;
+    --blur: 10px;
+    --rotate: 0deg;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: lavenderblush;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main img{
+    width: 35vw;
+    height: 60vh;
+
+
+    /* variables are used here  */
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--blur));
+    transform: rotate(var(--rotate));
+
+    transition: ease-in-out .2s;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.h1{
+    color: var(--base);
+}
+
+.controls{
+    width: 90vw;
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.controls label{
+    font-size: 40px;
+
+    margin: 20px;
+}
+
+input:hover{
+    cursor: pointer;
+}
